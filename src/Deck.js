@@ -8,6 +8,7 @@ class Deck {
     this.cards.forEach(() => {
       this.count++
     });
+    return this.count
   };
 
 }
