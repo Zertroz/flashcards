@@ -23,6 +23,7 @@ class Round {
     if (!this.turn.evaluateGuess()) {
       this.incorrectGuesses.push(this.currentCard.id);
     };
+    return this.correct
   };
 
   calculatePercentageCorrect() {
@@ -31,9 +32,10 @@ class Round {
   }
 
   endRound() {
-    console.log(`** Round over! ** You answered ${this.calculatePercentageCorrect()}% of the questions correctly!`)
-    return 'end'
-  }
+    console.log(`** Round over! ** You answered ${this.calculatePercentageCorrect()}% of the questions correctly!`);
+    return 'end';
+  };
+
 };
 
 module.exports = Round;
