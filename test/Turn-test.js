@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const Turn = require('../src/Turns');
+const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 
 describe('Turn', function () {
@@ -36,6 +36,7 @@ describe('Turn', function () {
   })
 
   it('should give feedback', function () {
+    turn.evaluateGuess()
     expect(turn.giveFeedback()).to.equal('correct!');
 
     turn = new Turn('pear', card);
