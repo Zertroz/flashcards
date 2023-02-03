@@ -32,15 +32,13 @@ describe('Game class', function() {
 
   it('should create a deck', function () {
     game.createDeck(prototypeQuestions);
-
+    game.deck.countCards()
     expect(game.deck).to.be.instanceOf(Deck);
     expect(game.deck.count).to.equal(30);
   });
 
   it('should create a new round', function () {
     game.newRound(prototypeQuestions);
-
-    console.log(game.deck)
 
     expect(game.round).to.be.instanceOf(Round);
     expect(game.currentRound).to.equal(1);
